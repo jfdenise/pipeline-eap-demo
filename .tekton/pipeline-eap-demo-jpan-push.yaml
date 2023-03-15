@@ -183,7 +183,8 @@ spec:
       - name: source
         workspace: workspace
       - name: dockerconfig
-        secret: jfdockerconfig
+        secret: 
+          secretName: jfdockerconfig
     - name: sanity-inspect-image
       params:
       - name: IMAGE_URL
