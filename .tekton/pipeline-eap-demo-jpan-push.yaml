@@ -183,8 +183,7 @@ spec:
       - name: source
         workspace: workspace
       - name: dockerconfig
-        secret: 
-          secretName: jfdockerconfigdir
+        workspace: dockerconf
     - name: sanity-inspect-image
       params:
       - name: IMAGE_URL
@@ -344,4 +343,7 @@ spec:
   - name: git-auth
     secret:
       secretName: '{{ git_auth_secret }}'
+  - name: dockerconf
+    secret:
+      secretName: jfdockerconfig
 status: {}
